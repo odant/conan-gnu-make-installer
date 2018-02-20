@@ -18,7 +18,7 @@ class GNUMakeInstaller(ConanFile):
     def build(self):
         folder = os.path.join(self.source_folder, "src")
         with tools.chdir(folder):
-            self.run("build_w32.bat")
+            self.run("build_w32.bat MAKE=make")
 
     def package(self):
         self.copy("*make.exe", dst=".", keep_path=False)

@@ -4,7 +4,7 @@ import os
 
 class GNUMakeInstaller(ConanFile):
     name = "gnu_make_installer"
-    version = "4.2.90"
+    version = "4.2.1"
     license = "GNU General Public License v3.0 https://www.gnu.org/licenses/gpl-3.0.html"
     description = "Binary GNU Make for Windows"
     url = "https://github.com/odant/conan-gnu_make_installer"
@@ -17,7 +17,7 @@ class GNUMakeInstaller(ConanFile):
 
     def build(self):
         folder = os.path.join(self.source_folder, "src")
-        with tools.chdir(folder):
+        with tools.chdir(folder), tools.vcvars(self.setting, arch=self.settings.arch_build, compiler_version=15):
             self.run("build_w32.bat")
 
     def package(self):

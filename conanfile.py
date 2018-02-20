@@ -4,7 +4,7 @@ import os
 
 class GNUMakeInstaller(ConanFile):
     name = "gnu_make_installer"
-    version = "4.2.1"
+    version = "4.2.90"
     license = "GNU General Public License v3.0 https://www.gnu.org/licenses/gpl-3.0.html"
     description = "Binary GNU Make for Windows"
     url = "https://github.com/odant/conan-gnu_make_installer"

@@ -6,7 +6,7 @@ class GNUMakeInstaller(ConanFile):
     name = "gnu_make_installer"
     version = "4.2.1"
     license = "GNU General Public License v3.0 https://www.gnu.org/licenses/gpl-3.0.html"
-    description = "Make is a tool which controls the generation of executables and other non-source files of a program from the program's source files."
+    description = "Binary GNU Make for Windows"
     url = "https://github.com/odant/conan-gnu_make_installer"
     settings = {
         "os_build": ["Windows"],
